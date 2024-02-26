@@ -6,7 +6,7 @@ let lastSearchTerm = ""; //Keep track of last search term
 async function getGiphy(searchTerm) {
 //Reset offset if a new term is searched
 if(searchTerm !== lastSearchTerm) {
-  searchOffset = 0;
+  searchOffset = 0; //New search term, start from beginning
   lastSearchTerm = searchTerm;
 }
   const gifs = await axios.get("https://api.giphy.com/v1/gifs/search", {
@@ -18,7 +18,7 @@ if(searchTerm !== lastSearchTerm) {
       }
     });
   displayGifs(gifs.data.data);
-  searchOffset++; //Prepare offset for the next item for the same search
+  searchOffset++; //If it's the same search term increment by one for the next result
 }
 
 //Function to display gifs
