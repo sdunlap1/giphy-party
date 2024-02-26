@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/darkly/bootstrap.min.css"
+    />
+    <title>Giphy Party!</title>
+  </head>
+  <body>
+    <div class="container text-center mt-5">
+      <h1 class="mb-4">GIPHY PARTEEE!</h1>
+      <form id="giphyForm" class="form-inline justify-content-center">
+        <div class="form-group mb-2">
+          <input
+            type="text"
+            name="Giphy Search"
+            id="giphySearch"
+            class="mr-3"
+            placeholder="Search for them Giphs Yo!"
+            size="50"
+          />
+        </div>
+        <button type="submit" id="submit" class="btn btn-dark mb-2 mr-3 border border-transparent">
+          Submit
+        </button>
+        <button type="button" id="delete" class="btn btn-danger mb-2 border border-transparent">
+          Delet all Images
+        </button>
+      </form>
+    </div>
+    <!-- Gifs container on 3 wide -->
+    <div id="gifsContainer" class="container mt-3"></div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
